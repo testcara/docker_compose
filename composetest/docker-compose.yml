@@ -1,0 +1,12 @@
+version: '2'
+# the servers contain 2 parts, web and redis parts
+services:
+  web:
+    # to build one images based on the Dockerfile under the current dir
+    build: .
+    # map the port
+    ports:
+     - "5000:5000"
+  redis:
+    # pull the redis images from docker.io
+    image: "redis:alpine"
